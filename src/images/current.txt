@@ -1,0 +1,7 @@
+{
+ "frame_id":652, 
+ "objects": [ 
+  {"class_id":1, "name":"no mask", "relative_coordinates":{"center_x":0.505191, "center_y":0.371339, "width":0.351495, "height":0.792464}, "confidence":0.916863}
+ ],
+ "time_string":"2021_1_5 14:16:41"
+},
