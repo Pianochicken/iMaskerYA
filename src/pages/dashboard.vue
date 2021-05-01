@@ -1,18 +1,13 @@
 <template>
   <q-page class="q-pa-lg flex justify-center">
-    <img
-      style="position:absolute; background-position:center center; z-index: -100;"
-      alt="iMaskerYA"
-      src="../images/ntpu_background.gif"
-    >
-    <q-card v-if="total_detect_number !== '載入中...'" flat class="col-12 q-pa-sm row" style="width: 100%; font-family:Microsoft JhengHei;">
-      
-      <!-- <q-card v-if="total_detect_number === '載入中...'" class="col-12 row flex " style="background-color:#cc66ff; height: 100%">
-        <q-inner-loading class="" :showing="total_detect_number === '載入中...'">
-          <q-spinner-cube size="100px" color="primary" />
-        </q-inner-loading>
-        <p class="col-12 row justify-center" style="font-size:3rem;"> 載入中...</p>
-      </q-card> -->
+
+    <q-card v-if="total_detect_number !== '載入中...'" flat class="col-12 q-pa-sm row" style="width: 100%; font-family:Microsoft JhengHei; z-index: 2">
+      <img
+        class="flex flex-center"
+        style="position:absolute; background-position:center center; margin-left:550px; padding-top:100px; z-index: 0; width:45%; height:70%;"
+        alt="iMaskerYA"
+        src="../images/ntpu_background.gif"
+      >
 
       <div v-if="unmask_number === 0" class="col-12 row flex flex-center" style="background-color:#00cc00">
         <q-img src="../images/mask_good.png"  style="height:auto-fill; width:5%;"/>
@@ -107,16 +102,10 @@ export default {
           'utf8'
         )
 
-        // console.log("fileContents: ", fileContents, "        fileContents.length: ", fileContents.length)
         if (fileContents.length !== 0){
           fileContents = fileContents.slice(0, fileContents.length-3)
           var json_data = JSON.parse(fileContents);
         
-          // console.log(fileContents)
-          // console.log("fileContents type: ", typeof(fileContents))
-
-
-          // console.log("json_data: ", json_data)
           this.total_detect_number = json_data.objects.length
 
           var temp_mask_number = 0
@@ -156,16 +145,10 @@ export default {
             'utf8'
           )
 
-          // console.log("fileContents: ", fileContents, "        fileContents.length: ", fileContents.length)
           if (fileContents.length !== 0){
             fileContents = fileContents.slice(0, fileContents.length-3)
             var json_data = JSON.parse(fileContents);
-          
-            // console.log(fileContents)
-            // console.log("fileContents type: ", typeof(fileContents))
 
-
-            // console.log("json_data: ", json_data)
             this.total_detect_number = json_data.objects.length
 
             var temp_mask_number = 0
@@ -220,13 +203,5 @@ export default {
         clearInterval(this.continue_loading);
     next();
   },
-  // watch: {
-  //   global_total_detect_number(){
-  //     console.log("global_total_detect_number change!!!!")
-  //   },
-  //   total_detect_number(){
-  //     console.log("total_detect_number change!!!!")
-  //   }
-  // }
 }
 </script>
