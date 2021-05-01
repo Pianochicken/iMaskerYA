@@ -1,8 +1,8 @@
-# iMaskerYA 
+## iMaskerYA 
 
 In response to the impact of the Covid-19 epidemic, the mask detection system uses a camera to detect whether people on the screen are wearing masks. The system uses YOLOv4 and combines with Quasar to set up a page to achieve the project goal of "real-time detection, warning, and statistics".
 
-## Install Steps
+### Install Steps
 1. Clone this repo and install quasar dependencies
 ```
 git clone https://github.com/Pianochicken/iMaskerYA.git
@@ -26,3 +26,7 @@ p.s Install [Python](https://www.python.org/downloads/) if you don't have it.
 ### Implement
 
 Click the <b>run_main.py</b> in iMaskerYA folder to enjoy the mask-detecting system! 
+
+<br/>
+
+![Mask_detecting](https://github.com/Pianochicken/iMaskerYA/blob/main/public/iMaskerYA_demo.png)
