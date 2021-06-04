@@ -30,3 +30,5 @@ Click the <b>run_main.py</b> in iMaskerYA folder to enjoy the mask-detecting sys
 <br/>
 
 ![Mask_detecting](https://github.com/Pianochicken/iMaskerYA/blob/main/public/iMaskerYA_demo.png)
+
+[Demo Link](https://www.youtube.com/watch?v=GY70J7ilkrk)
